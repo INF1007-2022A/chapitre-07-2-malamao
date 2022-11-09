@@ -4,11 +4,31 @@
 from collections import deque
 
 
-def get_fibonacci_number(TODO):
-	pass
+def get_fibonacci_number(indice):
+	#if indice == 0:
+	#	F = 0
+	#if indice == 1:
+	#	F = 1
+	#if indice >= 2:
+	#	F = get_fibonacci_number(indice - 1) + get_fibonacci_number(indice - 2)
+	#	indice -= 1
+	return (
+		0 if indice == 0 else
+		1 if indice == 1 else
+		get_fibonacci_number(indice-2) + get_fibonacci_number(indice-1)
+	)
 
-def get_fibonacci_sequence(TODO):
-	pass
+
+def get_fibonacci_sequence(taille):
+	Fibonnaci = []
+	if taille >= 1:
+		Fibonnaci.append(0)
+		if taille >= 2:
+			Fibonnaci.append(1)
+			if taille >= 3:
+				for i in range(taille-2):
+					Fibonnaci.append(Fibonnaci[i]+Fibonnaci[i+1])
+	return Fibonnaci
 
 def get_sorted_dict_by_decimals(TODO):
 	pass
